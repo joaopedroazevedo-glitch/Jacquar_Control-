@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Tear, StatusTear } from '../types';
-import { Clock, Activity, Settings, AlertOctagon, User, FileText, Hash, Info } from 'lucide-react';
+import { Clock, Activity, Settings, AlertOctagon, User, FileText, Hash, Info, Flag } from 'lucide-react';
 
 interface TearCardProps {
   tear: Tear;
@@ -37,16 +37,27 @@ const TearCard: React.FC<TearCardProps> = ({ tear, onClick }) => {
   return (
     <div 
       onClick={() => onClick(tear)}
-      className={`relative p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-lg cursor-pointer hover:scale-[1.02] flex flex-col justify-between min-h-[220px] ${statusColors[tear.status]}`}
+      className={`relative p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-lg cursor-pointer hover:scale-[1.02] flex flex-col justify-between min-h-[220px] ${statusColors[tear.status]} ${tear.prioritario ? 'ring-2 ring-red-400 ring-offset-1' : ''}`}
     >
       <div>
-        <div className="flex justify-between items-center mb-3">
+        <div className="flex justify-between items-center mb-1">
           <h3 className="font-bold text-lg">{tear.nome}</h3>
           <span className="flex items-center gap-1 text-sm font-semibold uppercase tracking-wider bg-white/50 px-2 py-1 rounded-md">
             {statusIcons[tear.status]}
             {tear.status}
           </span>
         </div>
+
+        {/* Priority Indicator - Below Status */}
+        {tear.prioritario && (
+          <div className="mb-3 inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide bg-red-100 text-red-700 border border-red-200">
+            <Flag className="w-3 h-3 fill-current" />
+            Prioridade Alta
+          </div>
+        )}
+        
+        {/* Spacer if no priority, to keep alignment if needed, or just let it collapse */}
+        {!tear.prioritario && <div className="mb-3"></div>}
 
         <div className="space-y-2 text-sm">
           <div className="flex items-center gap-2 opacity-80">

@@ -16,7 +16,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-001",
     fimPrevisto: generateFutureDate(4),
     eficiencia: 92,
-    descricao: ""
+    descricao: "",
+    prioritario: false
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-045",
     fimPrevisto: generateFutureDate(12),
     eficiencia: 88,
-    descricao: ""
+    descricao: "",
+    prioritario: true
   },
   {
     id: 3,
@@ -38,7 +40,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-012",
     fimPrevisto: generateFutureDate(1),
     eficiencia: 0,
-    descricao: "A aguardar fio trama azul 30/2"
+    descricao: "A aguardar fio trama azul 30/2",
+    prioritario: true
   },
   {
     id: 4,
@@ -49,7 +52,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "MAN-99",
     fimPrevisto: generateFutureDate(48),
     eficiencia: 0,
-    descricao: "Substituição de rolamentos do motor principal"
+    descricao: "Substituição de rolamentos do motor principal",
+    prioritario: false
   },
   {
     id: 5,
@@ -60,7 +64,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-102",
     fimPrevisto: generateFutureDate(6),
     eficiencia: 95,
-    descricao: ""
+    descricao: "",
+    prioritario: false
   },
   {
     id: 6,
@@ -71,7 +76,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-150",
     fimPrevisto: generateFutureDate(2),
     eficiencia: 40,
-    descricao: "Afinação de teia em curso"
+    descricao: "Afinação de teia em curso",
+    prioritario: false
   },
   {
     id: 7,
@@ -82,7 +88,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-002",
     fimPrevisto: generateFutureDate(5),
     eficiencia: 91,
-    descricao: ""
+    descricao: "",
+    prioritario: false
   },
   {
     id: 8,
@@ -93,7 +100,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-088",
     fimPrevisto: generateFutureDate(24),
     eficiencia: 85,
-    descricao: "Atenção: verificação de tensão periódica necessária"
+    descricao: "Atenção: verificação de tensão periódica necessária",
+    prioritario: true
   },
   {
     id: 9,
@@ -104,7 +112,8 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-200",
     fimPrevisto: generateFutureDate(0),
     eficiencia: 0,
-    descricao: "Fim de peça. Aguarda ordem de produção."
+    descricao: "Fim de peça. Aguarda ordem de produção.",
+    prioritario: false
   },
   {
     id: 10,
@@ -115,6 +124,7 @@ export const INITIAL_TEARES: Tear[] = [
     numeroInterno: "INT-2024-330",
     fimPrevisto: generateFutureDate(72),
     eficiencia: 98,
-    descricao: ""
+    descricao: "",
+    prioritario: false
   }
 ];
